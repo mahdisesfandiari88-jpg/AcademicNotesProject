@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDLAY - Welcome</title>
+     <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+
+    <section class="hero-section" id="top">
+        <header class="navbar">
+            <div class="logo">
+                <img src="/static/images/logo/studlay_logo.png" alt="studlay logo" class="logo-img">
+                <h1>STUDLAY</h1>
+            </div>
+
+            <nav class="nav-links">
+                <a href="welcome.html">HOME</a>
+                <a href="#features">FEATURES</a>
+                <a href="#contact">CONTACT US</a>
+                <a href="login.html" class="login-btn">Log in</a>
+                <a href="signup.html" class="signup-btn">Sign up</a>
+            </nav>
+        </header>
+
+        <div class="hero-container">
+            <div class="content-left">
+                <h2 class="main-title">WELCOME TO STUDLAY</h2>
+                <p class="description">
+                    Manage your notes, courses,
+                    deadlines and study progress
+                    all in one place.
+                </p>
+                <!-- دکمه Learn more حالا به صورت دکمه عمل می‌کند -->
+                <button id="openModalBtn" class="learn-more-btn">Learn more</button>
+            </div>
+
+            <div class="content-right">
+                <img src="/static/images/other_pics/welcomepic.png" alt="Studlay Illustration" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش ویژگی‌ها (Features) که مثل قبل سر جایش است -->
+    <section id="features" class="info-section">
+        <h2>Features</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                 <img src="/static/images/other_pics/welcom_f1.svg" alt="Manage Notes & Docs">
+                <h3>Manage Notes & Docs</h3>
+                <p>Centralize all your academic documents and notes in one secure, accessible location</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="/static/images/other_pics/welcome_f2.svg" alt="Organize Courses">
+                <h3>Organize Courses</h3>
+                <p>Keep your online classes and courses organized, just the way you like</p>
+            </div>
+
+            <div class="feature-card">
+                <img src="/static/images/other_pics/welcom_f3.svg" alt="Fast Search & Easy Access">
+                <h3>Fast Search & Easy Access</h3>
+                <p>Access your notes, courses, and study materials quickly with fast search</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- بخش تماس با ما -->
+    <section id="contact" class="info-section contact-section">
+        <h2>Contact Us</h2>
+
+         <div class="founding-team">
+           <h3>Founding Team</h3>
+
+             <div class="member">
+              <p><strong>Mahdis:</strong></p>
+                <a href="mailto:mahdis.esfandiari88@gmail.com">mahdis.esfandiari88@gmail.com</a>
+             </div>
+
+             <div class="member">
+               <p><strong>Souzan:</strong></p>
+                <a href="mailto:dadashzadehsouzan@gmail.com">dadashzadehsouzan@gmail.com</a>
+             </div>
+         </div>
+        
+    </section>
+
+    <!-- ================= پنجره پاپ‌آپ (Modal) ================= -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h2>About STUDLAY</h2>
+            </div>
+            <div class="modal-body">
+                <p><strong>Studlay</strong> is your ultimate academic companion, designed by students for students. Our mission is to simplify your study life by bringing all your essential tools into one beautifully designed dashboard.</p>
+                
+                <div class="modal-highlights">
+                    <div class="highlight-item">
+                        <h4>✨ All-in-One</h4>
+                        <p>No more switching between calendar apps, notebook files, and reminder list. It's all here.</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h4>🚀 Boost Productivity</h4>
+                        <p>Stay on top of your game with visual progress trackers and automated deadline alerts.</p>
+                    </div>
+                </div>
+                
+                <p class="modal-footer-text">Ready to experience a smarter way of studying? Close this window and click <strong>Sign up</strong> to create your free account today!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- اسکریپت جاوااسکریپت برای کنترل پاپ‌آپ -->
+    <script>
+        // گرفتن عناصر از HTML
+        const modal = document.getElementById("infoModal");
+        const openBtn = document.getElementById("openModalBtn");
+        const closeBtn = document.querySelector(".close-btn");
+
+        // باز کردن پاپ‌آپ هنگام کلیک روی دکمه Learn More
+        openBtn.onclick = function() {
+            modal.style.display = "flex";
+            document.body.style.overflow = "hidden"; // غیرفعال کردن اسکرول صفحه اصلی هنگام باز بودن پاپ‌آپ
+        }
+
+        // بستن پاپ‌آپ هنگام کلیک روی دکمه ضربدر
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = "auto"; // فعال کردن مجدد اسکرول صفحه
+        }
+
+        // بستن پاپ‌آپ در صورت کلیک روی فضای خالی بیرون از باکس
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+
+</body>
+</html>
