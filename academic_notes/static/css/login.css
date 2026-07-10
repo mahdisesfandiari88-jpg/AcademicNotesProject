@@ -1,0 +1,197 @@
+/* ==========================================
+   استایل‌های اختصاصی صفحه لاگین (بدون تداخل با ولکام)
+   ========================================== */
+
+:root {
+  --login-bg-cream: #F7F1E8;
+  --login-card-cream: #FFF8F1;
+  --login-accent-green: #000000;
+  --login-accent-pink: #F0B8B6;
+  --login-text-dark: #3F3A36;
+  --login-text-muted: #8A8178;
+  --login-border: #E7DCCF;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: var(--login-bg-cream);
+}
+
+.login-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 600px;
+  display: flex;
+  background: var(--login-card-cream);
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+.login-form-section {
+  width: 50%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+
+
+.login-title { 
+  font-size: 2rem; 
+  color: var(--login-text-dark); 
+  margin-bottom: 10px; 
+}
+
+.login-subtitle { 
+  color: var(--login-text-muted); 
+  margin-bottom: 30px; 
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.login-form { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+}
+
+.login-input-group label { 
+  display: block; 
+  margin-bottom: 5px; 
+  font-weight: 600; 
+  color: var(--login-text-dark); 
+  font-size: 0.9rem;
+}
+
+.login-input-group input { 
+  width: 100%; 
+  padding: 12px; 
+  border: 1.5px solid var(--login-border); 
+  border-radius: 12px; 
+  outline: none; 
+  font-size: 0.95rem;
+  transition: border-color 0.3s;
+}
+
+.login-input-group input:focus { 
+  border-color: var(--login-accent-pink); 
+}
+
+
+.login-btn { 
+  padding: 12px; 
+  border: none; 
+  border-radius: 12px; 
+  background: var(--login-accent-pink); 
+  color: white; 
+  font-weight: bold; 
+  cursor: pointer; 
+  margin-top: 10px; 
+  font-size: 1rem;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.login-btn:hover {
+  background: #e8a9a7;
+}
+
+/* افکت وقتی موس روی لینک‌ها می‌ره */
+.login-forgot a:hover, 
+.login-signup-text a:hover {
+    text-decoration: underline; /* زیرش خط می‌کشه */
+    color: #020202;             /* رنگش کمی تغییر می‌کنه (تیره‌تر میشه) */
+}
+
+
+.login-signup-text { 
+  margin-top: 15px; 
+  text-align: center; 
+  color: var(--login-text-muted); 
+  font-size: 0.9rem;
+}
+
+.login-signup-text a { 
+  color: var(--login-accent-green); 
+  text-decoration: none; 
+  font-weight: 600;
+}
+
+.login-visual-section { 
+  width: 50%; 
+  position: relative; 
+  background: #fdf5eb;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+}
+
+.login-visual-shape {
+  position: absolute;
+  width: 280px;
+  height: 500px;
+  background: var(--login-accent-pink);
+  opacity: 0.2;
+  border-radius: 140px 140px 0 0;
+  bottom: 0;
+}
+
+.login-visual-img { 
+  width: 80%; 
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .login-wrapper { 
+    flex-direction: column; 
+  }
+  .login-form-section, 
+  .login-visual-section { 
+    width: 100%; 
+  }
+  .login-visual-section {
+    min-height: 300px;
+  }
+}
+.login-brand {
+    display: flex;
+    align-items: center;
+    /* این عدد رو هرچقدر کمتر کنی، فاصله کمتر میشه */
+    /* الان روی 10px هست، تغییرش بده به مثلا 4px یا 5px */
+    gap: 0px; 
+    margin-bottom: 40px;
+}
+
+
+.login-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    transform: scale(2.2);
+    position: relative;
+    top: 2px;
+}
+
+.login-brand h1 {
+    font-size: 1.5rem;
+    color: var(--login-text-dark);
+    margin: 0;
+    line-height: 1;
+}
+.login-visual-img{
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  object-fit: contain;
+  display: block;
+}
+
+

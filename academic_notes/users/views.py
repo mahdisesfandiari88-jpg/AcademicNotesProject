@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .forms import RegisterForm, LoginForm
 from django.contrib.auth import login, authenticate
@@ -9,12 +9,12 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse("User Created")
+            return redirect("login")
         else:
             print(form.errors)
     else:
         form = RegisterForm()
-    return render(request, "register.html", {"form": form})
+    return render(request, "signup.html", {"form": form})
 
 
 def login_view(request):
@@ -40,3 +40,6 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return HttpResponse("Logout Successful")
+
+def welcome(request):
+    return render(request, "welcome.html")
