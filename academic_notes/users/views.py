@@ -37,9 +37,25 @@ def login_view(request):
     return render(request, "login.html", {"form": form})    
 
 
+
 def logout_view(request):
     logout(request)
     return HttpResponse("Logout Successful")
 
 def welcome(request):
     return render(request, "welcome.html")
+
+def dashboard(request):
+    return render(request, "dashboard.html")
+
+def profile(request):
+    return render(request, "profile.html")
+
+def edit_profile(request):
+    return render(request, "edit-profile.html")
+
+def add_course(request):
+    return render(request, "add-course.html")
+
+def edit_course(request):
+    return render(request, "edit-course.html")

@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- ================= Welcome Card ================= -->
+
+<section class="welcome-card">
+
+    <div class="welcome-text">
+
+        <h1>Welcome Back, Souzan! 👋</h1>
+
+        <p>
+            Keep learning,<br>
+            one note at a time.
+        </p>
+
+    </div>
+
+    <div class="welcome-image">
+        <img src="{% static 'images/other-pics/Working remotely-pana.svg' %}"
+             alt="Study Illustration">
+    </div>
+
+</section>
+
+<!-- ================= Recent Section ================= -->
+
+<section class="recent-section">
+
+    <div class="recent-card">
+
+        <h2>Recent Notes</h2>
+
+        <div class="recent-item">
+            📝 Loops in C++
+        </div>
+
+        <div class="recent-item">
+            📝 HTML Basics
+        </div>
+
+        <div class="recent-item">
+            📝 Physics Formulas
+        </div>
+
+    </div>
+
+    <div class="recent-card">
+
+        <h2>Recent Files</h2>
+
+        <div class="recent-item">
+            📄 Lecture1.pdf
+        </div>
+
+        <div class="recent-item">
+            📄 Homework.docx
+        </div>
+
+        <div class="recent-item">
+            📄 Midterm.pdf
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

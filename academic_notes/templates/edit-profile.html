@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+<section class="profile-page">
+
+    <div class="profile-card">
+
+        <!-- Avatar -->
+        <div class="profile-avatar">
+            <img src="{% static 'images/other-pics/pfp.jpg' %}" alt="Profile">
+        </div>
+
+        <!-- Upload -->
+        <button class="upload-avatar-btn">
+            Upload & Change Photo
+        </button>
+
+        <!-- Gender -->
+        <div class="input-group">
+
+            <label>Gender</label>
+
+            <div class="gender-options">
+
+                <label>
+                    <input type="radio" name="gender" checked>
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" name="gender">
+                    Male
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- Full Name -->
+        <div class="input-group">
+            <label>Full Name</label>
+            <input type="text" value="Souzan Dadashzadeh">
+        </div>
+
+        <!-- Email -->
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" value="souzan@example.com">
+        </div>
+
+        <!-- University -->
+        <div class="input-group">
+            <label>University</label>
+            <input type="text" value="University of Guilan">
+        </div>
+
+        <!-- Major -->
+        <div class="input-group">
+            <label>Major</label>
+            <input type="text" value="Computer Science">
+        </div>
+
+        <!-- Bio -->
+        <div class="input-group">
+            <label>Bio</label>
+
+            <textarea rows="4">
+Passionate about programming, web development and creating beautiful user interfaces.
+            </textarea>
+
+        </div>
+
+        <!-- Save -->
+        <button class="edit-profile-btn">
+            Save Changes
+        </button>
+
+    </div>
+
+</section>
+
+{% endblock %}

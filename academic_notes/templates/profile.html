@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+
+<section class="profile-page">
+
+    <div class="profile-card">
+
+        <div class="profile-avatar">
+            <img src="{% static 'images/other-pics/pfp.jpg' %}" alt="Profile">
+        </div>
+
+        <h2>Souzan Dadashzadeh</h2>
+
+        <p class="profile-role">
+            Computer Science Student
+        </p>
+
+        <div class="profile-info">
+
+            <div class="info-box">
+                <h4>Email</h4>
+                <p>souzan@example.com</p>
+            </div>
+
+            <div class="info-box">
+                <h4>University</h4>
+                <p>University of Guilan</p>
+            </div>
+
+            <div class="info-box">
+                <h4>Bio</h4>
+                <p>
+                    Passionate about programming,
+                    web development and creating
+                    beautiful user interfaces.
+                </p>
+            </div>
+
+        </div>
+
+        <a href="{% url 'edit_profile' %}" class="edit-profile-btn">
+            Edit Profile
+        </a>
+    </div>
+
+</section>
+
+{% endblock %}
