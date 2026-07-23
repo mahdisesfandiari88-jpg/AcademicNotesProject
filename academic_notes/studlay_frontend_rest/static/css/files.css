@@ -1,0 +1,948 @@
+/* ---------- Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background:#FDF9F8;
+}
+
+/* ---------- Layout ---------- */
+
+.container{
+    display:flex;
+}
+
+.main-content{
+    flex:1;
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar{
+
+    width:320px;
+    height:100vh;
+
+    background:#FFF9F5;
+
+    padding:30px 22px;
+
+    border-right:1px solid #ececec;
+
+    display:flex;
+    flex-direction:column;
+}
+
+/* ---------- Logo ---------- */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 8px;   /* فاصله لوگو و متن */
+}
+
+.logo-img{
+    width:60px;
+    height:60px;
+    transform:scale(1.7);
+    margin-right:8px;
+}
+.logo h2{
+
+    font-size:28px;
+    color:#333;
+}
+
+/* ---------- Menu ---------- */
+
+.sidebar-menu{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.menu-item{
+
+    display:flex;
+    align-items:center;
+
+    gap:14px;
+
+    text-decoration:none;
+
+    color:#555;
+
+    padding:12px 16px;
+
+    border-radius:14px;
+
+    transition:.3s;
+}
+
+.menu-item:hover{
+
+    background:#F6E4E5;
+}
+
+.menu-item.active{
+
+    background:#E8B4BC;
+
+    color:#222;
+
+    font-weight:600;
+}
+
+
+/* ---------- My Courses Arrow ---------- */
+
+.arrow-icon{
+
+    margin-left:auto;
+
+    width:18px;
+    height:18px;
+
+    opacity:.7;
+
+    transform:rotate(-90deg);
+
+    transition:.3s;
+}
+
+/* ---------- Icons ---------- */
+
+.icon{
+
+    width:22px;
+    height:22px;
+}
+
+
+/* ---------- Divider ---------- */
+
+.divider{
+
+    width:100%;
+    height:1px;
+
+    background:#e6e6e6;
+
+    margin:30px 0;
+}
+
+
+/* ---------- Courses Dropdown ---------- */
+
+.courses-dropdown{
+
+    margin-left:18px;
+}
+
+
+/* ---------- Courses ---------- */
+
+.course-list{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.course-item{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:12px 14px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.course-item:hover{
+
+    background:#F7EEEE;
+}
+
+.course-left{
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+}
+
+
+/* ---------- Colored Dots ---------- */
+
+.course-dot{
+
+    width:12px;
+    height:12px;
+
+    border-radius:50%;
+}
+
+.green{
+    background:#9DAF9B;
+}
+
+.pink{
+    background:#e8b4bc;
+}
+
+.orange{
+    background:#F7C9A9;
+}
+
+.purple{
+    background:#C7B8FF;
+}
+/* ================= HEADER ================= */
+
+.main-content{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+/* Header */
+
+.header{
+
+    width:100%;
+
+    padding:28px 35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+/* Search */
+
+
+.search-bar{
+
+    width:1100px;
+
+    height:58px;
+
+    background:white;
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 22px;
+
+    gap:15px;
+
+    box-shadow:0 6px 20px rgba(0,0,0,.05);
+
+}
+
+.search-bar input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    font-size:15px;
+
+    color:#444;
+
+}
+
+.search-bar input::placeholder{
+
+    color:#9E9E9E;
+
+}
+
+.search-bar .icon{
+
+    width:20px;
+    height:20px;
+
+    opacity:0.6;
+
+}
+
+
+/* Profile */
+
+.profile-box{
+    
+    position:relative;
+
+    background:white;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    
+    padding: 12px 20px;
+
+    border-radius:16px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+    cursor:pointer;
+
+    transition:.3s;
+
+
+}
+
+.profile-box:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.profile-img{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.profile-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.profile-info h4{
+
+    color:#333;
+
+    font-size:15px;
+
+}
+
+.profile-info span{
+
+    color:#999;
+
+    font-size:12px;
+
+}
+
+/* ---------- Profile Dropdown ---------- */
+
+.profile-dropdown{
+
+    position:absolute;
+
+    top:75px;
+    right:0;
+
+    width:180px;
+
+    background:white;
+
+    border-radius:14px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    display:none;
+
+    overflow:hidden;
+
+}
+
+.profile-dropdown a{
+
+    display:block;
+
+    padding:14px 18px;
+
+    text-decoration:none;
+
+    color:#555;
+
+    transition:.3s;
+
+}
+
+.profile-dropdown a:hover{
+
+    background:#F7EEEE;
+
+}
+
+
+/* ---------- Arrow ---------- */
+
+.profile-arrow{
+
+    transition:.3s;
+
+    transform:rotate(0deg);
+
+}
+
+
+/* =========================================
+                FILES PAGE
+========================================= */
+
+.files-page{
+
+    width:78%;
+
+    margin:35px auto;
+
+}
+
+
+/* =========================================
+                HEADER
+========================================= */
+
+.files-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+
+}
+
+.files-title h1{
+
+    font-size:34px;
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+.files-title p{
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+
+/* =========================================
+            UPLOAD BUTTON
+========================================= */
+
+.upload-file-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:12px 22px;
+
+    background:#E8B4BC;
+
+    color:#222;
+
+    text-decoration:none;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.upload-file-btn:hover{
+
+    background:#D996A4;
+
+}
+
+
+/* =========================================
+                SEARCH
+========================================= */
+
+.files-search{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    background:white;
+
+    padding:14px 18px;
+
+    border-radius:16px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+
+    margin-bottom:28px;
+
+}
+
+.files-search input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    font-size:15px;
+
+    background:transparent;
+
+}
+
+
+/* =========================================
+                FILES LIST
+========================================= */
+
+.files-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+/* =========================================
+                FILE CARD
+========================================= */
+
+.file-card{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:white;
+
+    border:2px solid #F4D7DB;
+
+    border-radius:18px;
+
+    padding:18px 22px;
+
+    transition:.3s;
+
+}
+
+.file-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+}
+
+
+/* =========================================
+                LEFT SIDE
+========================================= */
+
+.file-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:16px;
+
+}
+
+.file-icon{
+
+    width:34px;
+
+    height:34px;
+
+    transition:.3s;
+
+}
+
+.file-card:hover .file-icon{
+
+    transform:scale(1.08);
+
+}
+
+.file-left h3{
+
+    font-size:19px;
+
+    color:#222;
+
+    margin-bottom:5px;
+
+}
+
+.file-left p{
+
+    font-size:13px;
+
+    color:#888;
+
+}
+
+
+/* =========================================
+                BUTTONS
+========================================= */
+
+.file-buttons{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+/* ---------- Open ---------- */
+
+.open-btn{
+
+    background:#E8B4BC;
+
+    color:#222;
+
+    text-decoration:none;
+
+    padding:9px 16px;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.open-btn:hover{
+
+    background:#D996A4;
+
+}
+
+
+/* ---------- Edit ---------- */
+
+.edit-btn{
+
+    background:#FCEEF1;
+
+    color:#B45F78;
+
+    text-decoration:none;
+
+    padding:9px 16px;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.edit-btn:hover{
+
+    background:#F6DEE6;
+
+}
+
+
+/* ---------- Delete ---------- */
+
+.delete-btn{
+
+    background:#F8D7DA;
+
+    color:#B42318;
+
+    border:none;
+
+    padding:9px 16px;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+    background:#F2B8C0;
+
+}
+
+
+/* =========================================
+            UPLOAD FILE PAGE
+========================================= */
+
+.upload-file-page{
+
+    width:78%;
+
+    margin:35px auto;
+
+}
+
+
+/* ---------- Header ---------- */
+
+.upload-file-header{
+
+    margin-bottom:30px;
+
+}
+
+.upload-file-header h1{
+
+    font-size:34px;
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+.upload-file-header p{
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+
+/* ---------- Form ---------- */
+
+.upload-file-form{
+
+    background:white;
+
+    border:2px solid #F4D7DB;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+
+}
+
+
+/* ---------- Input ---------- */
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:24px;
+
+}
+
+.input-group label{
+
+    font-weight:600;
+
+    color:#444;
+
+    margin-bottom:10px;
+
+}
+
+.input-group input[type="text"]{
+
+    padding:14px 18px;
+
+    border:2px solid #F4D7DB;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.input-group input[type="text"]:focus{
+
+    border-color:#E8B4BC;
+
+}
+
+
+/* ---------- Upload Box ---------- */
+
+.upload-box{
+
+    border:2px dashed #E8B4BC;
+
+    border-radius:18px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    background:#FFF8F9;
+
+    transition:.3s;
+
+}
+
+.upload-box:hover{
+
+    background:#FFF2F4;
+
+}
+
+.upload-icon{
+
+    width:55px;
+
+    margin-bottom:15px;
+
+}
+
+.upload-box h3{
+
+    color:#B45F78;
+
+    margin-bottom:8px;
+
+}
+
+.upload-box p{
+
+    color:#888;
+
+    margin-bottom:20px;
+
+    font-size:14px;
+
+}
+
+.upload-box input[type="file"]{
+
+    font-size:14px;
+
+}
+
+
+/* ---------- Upload Button ---------- */
+
+.upload-btn{
+
+    background:#E8B4BC;
+
+    color:#222;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.upload-btn:hover{
+
+    background:#D996A4;
+
+}
+
+
+
+
+
+/* ================= Delete Modal ================= */
+
+/* بعد از جنگو اضافه میکنم
+
+
+/* ================= Responsive ================= */
+
+/* بعد از جنگو اضافه میکنم

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studlay Dashboard</title>
+
+    <link rel="stylesheet" href="../static/css/dashboard.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="../static/images/other-pics/studlay_logo.png" alt="Studlay Logo" class="logo-img">
+        <h2>Studlay</h2>
+    </div>
+
+
+  <!-- Main Navigation -->
+
+<nav class="sidebar-menu">
+
+    <a href="dashboard.html" class="menu-item active">
+        <img src="../static/images/icons/house-heart.svg" class="icon">
+        <span>Home</span>
+    </a>
+
+
+    <a href="add-course.html" class="menu-item">
+        <img src="../static/images/icons/circle-plus (2).svg" class="icon">
+        <span>New Course</span>
+    </a>
+
+
+    <a href="#" class="menu-item my-courses-btn">
+        <img src="../static/images/icons/library.svg" class="icon">
+        <span>My Courses</span>
+        <img src="../static/images/icons/chevron-down.svg" class="arrow-icon">
+    </a>
+
+</nav>
+
+
+<!-- Divider -->
+
+<div class="divider"></div>
+
+
+<!-- ================= Course List ================= -->
+
+
+
+<!-- === پاپ اپ کورس هارو فقظ توی بیس گذاشتم چون  باید همه جا پیست میکردم . گفتم با جنگو کوتاه میشه  === -->
+
+
+<div class="courses-dropdown">
+
+    <div class="course-list">
+
+
+        <div class="course-item">
+
+            <div class="course-left">
+
+                <div class="course-dot green"></div>
+
+                <span>Programming</span>
+
+            </div>
+
+            <img src="../static/images/icons/ellipsis-vertical.svg" class="course-menu-icon">
+
+              <div class="course-menu">
+
+                <a href="edit-course.html">Edit Course</a>
+
+                <a href="#" onclick="openDeleteModal()">Delete Course</a>
+
+              </div>
+
+        </div>
+
+
+
+        <div class="course-item">
+
+            <div class="course-left">
+
+                <div class="course-dot pink"></div>
+
+                <span>Physics</span>
+
+            </div>
+
+            <img src="../static/images/icons/ellipsis-vertical.svg" class="course-menu-icon">
+
+              <div class="course-menu">
+
+                <a href="edit-course.html">Edit Course</a>
+
+                <a href="#" onclick="openDeleteModal()">Delete Course</a>
+
+              </div>
+ 
+        </div>
+
+
+
+        <div class="course-item">
+
+            <div class="course-left">
+
+                <div class="course-dot orange"></div>
+
+                <span>Calculus</span>
+
+            </div>
+
+            <img src="../static/images/icons/ellipsis-vertical.svg" class="course-menu-icon">
+
+             <div class="course-menu">
+
+               <a href="edit-course.html">Edit Course</a>
+
+               <a href="#" onclick="openDeleteModal()">Delete Course</a>
+
+             </div>
+
+        </div>
+
+
+
+        <div class="course-item">
+
+            <div class="course-left">
+
+                <div class="course-dot purple"></div>
+
+                <span>English</span>
+
+            </div>
+
+            <img src="../static/images/icons/ellipsis-vertical.svg" class="course-menu-icon">
+              <div class="course-menu">
+
+                <a href="edit-course.html">Edit Course</a>
+
+                <a href="#" onclick="openDeleteModal()">Delete Course</a>
+
+              </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</aside>
+        
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <!-- Search -->
+
+    <div class="search-bar">
+
+        <img src="../static/images/icons/search.svg" class="icon" alt="Search">
+
+        <input
+            type="text"
+            placeholder="Search courses, notes or files..."
+        >
+
+    </div>
+
+
+    <!-- Profile -->
+
+    <div class="profile-box">
+
+        <img src="../static/images/icons/avatar-default-symbolic-svgrepo-com.svg"
+           class="profile-img"
+           alt="Profile">
+
+       <div class="profile-info">
+
+           <h4>Souzan</h4>
+
+           <span>Student</span>
+
+        </div>
+
+        <img src="../static/images/icons/chevron-down.svg" class="icon profile-arrow">
+
+        <div class="profile-dropdown">
+
+            <a href="profile.html">View Profile</a>
+
+            <a href="#">Logout</a>
+
+        </div>
+
+    </div>
+
+    
+
+</header>
+
+<!-- ================= Page Content ================= -->
+
+<!--
+    Dashboard
+    Add Course
+    Course Details
+    Profile
+    ...
+    این قسمت بعداً در هر صفحه تغییر می‌کند.
+-->
+
+        </main>
+
+    </div>
+
+<script>
+
+const myCoursesBtn = document.querySelector(".my-courses-btn");
+const coursesDropdown = document.querySelector(".courses-dropdown");
+const arrow = document.querySelector(".arrow-icon");
+
+coursesDropdown.style.display = "none";
+
+myCoursesBtn.addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    if (coursesDropdown.style.display === "none") {
+
+        coursesDropdown.style.display = "block";
+
+        arrow.style.transform = "rotate(0deg)";
+
+    } else {
+
+        coursesDropdown.style.display = "none";
+
+        arrow.style.transform = "rotate(-90deg)";
+
+    }
+
+});
+
+// ================= Profile =================
+
+const profileBox = document.querySelector(".profile-box");
+const profileDropdown = document.querySelector(".profile-dropdown");
+const profileArrow = document.querySelector(".profile-arrow");
+
+profileDropdown.style.display = "none";
+
+profileBox.addEventListener("click", function () {
+
+    if (profileDropdown.style.display === "none") {
+
+        profileDropdown.style.display = "block";
+        profileArrow.style.transform = "rotate(180deg)";
+
+    } else {
+
+        profileDropdown.style.display = "none";
+        profileArrow.style.transform = "rotate(0deg)";
+
+    }
+
+});
+
+// ================= Course Menu =================
+
+const menuIcons = document.querySelectorAll(".course-menu-icon");
+
+menuIcons.forEach((icon) => {
+
+    icon.addEventListener("click", function (e) {
+
+        e.stopPropagation();
+
+        const menu = this.nextElementSibling;
+
+        document.querySelectorAll(".course-menu").forEach(item => {
+
+            if (item !== menu) {
+                item.style.display = "none";
+            }
+
+        });
+
+        if (menu.style.display === "block") {
+
+            menu.style.display = "none";
+
+        } else {
+
+            menu.style.display = "block";
+
+        }
+
+    });
+
+});
+
+document.addEventListener("click", function () {
+
+    document.querySelectorAll(".course-menu").forEach(item => {
+
+        item.style.display = "none";
+
+    });
+
+});
+
+
+</script>
+
+
+
+    
+
+
+</body>
+</html>

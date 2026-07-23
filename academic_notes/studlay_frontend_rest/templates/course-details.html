@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studlay Dashboard</title>
+
+    <link rel="stylesheet" href="../static/css/course.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Sidebar -->
+
+<aside class="sidebar">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="../static/images/other-pics/studlay_logo.png" alt="Studlay Logo" class="logo-img">
+        <h2>Studlay</h2>
+    </div>
+
+
+  <!-- Main Navigation -->
+
+<nav class="sidebar-menu">
+
+    <a href="dashboard.html" class="menu-item active">
+        <img src="../static/images/icons/house-heart.svg" class="icon">
+        <span>Home</span>
+    </a>
+
+
+    <a href="add-course.html" class="menu-item">
+        <img src="../static/images/icons/circle-plus (2).svg " class="icon">
+        <span>New Course</span>
+    </a>
+
+
+    <a href="#" class="menu-item my-courses-btn">
+        <img src="../static/images/icons/library.svg" class="icon">
+        <span>My Courses</span>
+        <img src="../static/images/icons/chevron-down.svg" class="arrow-icon">
+    </a>
+
+</nav>
+
+
+<!-- Divider -->
+
+<div class="divider"></div>
+
+
+<!-- ================= Course List ================= -->
+
+
+<div class="courses-dropdown">
+
+    <div class="course-list">
+
+
+        <div class="course-item">
+
+            <div class="course-left">
+
+                <div class="course-dot green"></div>
+
+                <span>Programming</span>
+
+            </div>
+
+            <img src="../static/images/icons/ellipsis-vertical.svg" class="icon">
+
+        </div>
+
+
+
+        <div class="course-item">
+
+            <div class="course-left">
+
+                <div class="course-dot pink"></div>
+
+                <span>Physics</span>
+
+            </div>
+
+            <img src="../static/images/icons/ellipsis-vertical.svg" class="icon">
+
+        </div>
+
+
+
+        <div class="course-item">
+
+            <div class="course-left">
+
+                <div class="course-dot orange"></div>
+
+                <span>Calculus</span>
+
+            </div>
+
+            <img src="../static/images/icons/ellipsis-vertical.svg" class="icon">
+
+        </div>
+
+
+
+        <div class="course-item">
+
+            <div class="course-left">
+
+                <div class="course-dot purple"></div>
+
+                <span>English</span>
+
+            </div>
+
+            <img src="../static/images/icons/ellipsis-vertical.svg" class="icon">
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</aside>
+        
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <!-- Search -->
+
+    <div class="search-bar">
+
+        <img src="../static/images/icons/search.svg" class="icon" alt="Search">
+
+        <input
+            type="text"
+            placeholder="Search courses, notes or files..."
+        >
+
+    </div>
+
+
+    <!-- Profile -->
+
+    <div class="profile-box">
+
+        <img src="../static/images/icons/avatar-default-symbolic-svgrepo-com.svg"
+           class="profile-img"
+           alt="Profile">
+
+       <div class="profile-info">
+
+           <h4>Souzan</h4>
+
+           <span>Student</span>
+
+        </div>
+
+        <img src="../static/images/icons/chevron-down.svg" class="icon profile-arrow">
+
+        <div class="profile-dropdown">
+
+            <a href="profile.html">View Profile</a>
+
+            <a href="#">Logout</a>
+
+        </div>
+
+    </div>
+
+    
+
+</header>
+<!-- ================= Course Details Page ================= -->
+
+<section class="course-details-page">
+
+    <!-- Course Top Section -->
+
+    <div class="course-details-header">
+
+        <div class="course-heading">
+
+            <div class="course-name-row">
+                <span class="course-color-dot"></span>
+                <h1>Programming</h1>
+            </div>
+
+            <p>
+                This course contains all programming notes,
+                files and resources.
+            </p>
+
+        </div>
+         
+        <div class="course-actions">
+
+             <a href="edit-course.html" class="course-edit-button">
+               Edit Course
+             </a>
+
+             <button class="course-delete-button">
+               Delete
+             </button>
+
+        </div>
+
+        
+
+    </div>
+
+
+    <!-- Notes and Files Statistics -->
+
+    <div class="course-summary-cards">
+
+        <!-- Notes Card -->
+
+        <div class="course-summary-card notes-summary">
+
+            <div class="summary-text">
+                <strong>12</strong>
+                <span>Notes</span>
+            </div>
+
+            <div class="summary-image-box">
+                <img src="../static/images/icons/notepad-text.svg" alt="Notes">
+            </div>
+
+        </div>
+
+
+        <!-- Files Card -->
+
+        <div class="course-summary-card files-summary">
+
+            <div class="summary-text">
+                <strong>8</strong>
+                <span>Files</span>
+            </div>
+
+            <div class="summary-image-box">
+                <img src="../static/images/icons/folder-heart.svg" alt="Files">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Course Navigation Tabs -->
+
+    <nav class="course-details-tabs">
+
+        <a href="course-details.html" class="course-tab active">
+            Overview
+        </a>
+
+        <a href="notes.html" class="course-tab">
+            Notes
+        </a>
+
+        <a href="files.html" class="course-tab">
+            Files
+        </a>
+
+    </nav>
+
+
+    <!-- Recent Content -->
+
+    <div class="course-recent-grid">
+
+        <!-- Recent Notes -->
+
+        <section class="course-content-card notes-content-card">
+
+            <div class="course-content-heading">
+                <h2>Recent Notes</h2>
+                <span class="content-label notes-label">Notes</span>
+            </div>
+
+            <a href="view-note.html" class="course-content-item">
+
+                <div class="content-item-left">
+                    <img src="../static/images/icons/pencil-sparkles (1).svg" alt="">
+                    <div>
+                        <h3>Loops in C++</h3>
+                        <span>Programming</span>
+                    </div>
+                </div>
+
+                <span class="item-arrow"></span>
+
+            </a>
+
+
+            <a href="view-note.html" class="course-content-item">
+
+                <div class="content-item-left">
+                    <img src="../static/images/icons/pencil-sparkles (1).svg" alt="">
+                    <div>
+                        <h3>Functions</h3>
+                        <span>Programming</span>
+                    </div>
+                </div>
+
+                <span class="item-arrow"></span>
+
+            </a>
+
+
+            <a href="view-note.html" class="course-content-item">
+
+                <div class="content-item-left">
+                    <img src="../static/images/icons/pencil-sparkles (1).svg" alt="">
+                    <div>
+                        <h3>Arrays</h3>
+                        <span>Programming</span>
+                    </div>
+                </div>
+
+                <span class="item-arrow"></span>
+
+            </a>
+
+        </section>
+
+
+        <!-- Recent Files -->
+
+        <section class="course-content-card files-content-card">
+
+            <div class="course-content-heading">
+                <h2>Recent Files</h2>
+                <span class="content-label files-label">Files</span>
+            </div>
+
+            <a href="Lecture1.pdf" class="course-content-item">
+
+                <div class="content-item-left">
+                    <img src="../static/images/icons/file-text.svg" alt="">
+                    <div>
+                        <h3>Lecture1.pdf</h3>
+                        <span>PDF file</span>
+                    </div>
+                </div>
+
+                <span class="item-arrow"></span>
+
+            </a>
+
+
+            <a href="Homework.docx" class="course-content-item">
+
+
+                
+                
+
+        </main>
+        
+
+
+    </div>
+
+<script>
+
+const myCoursesBtn = document.querySelector(".my-courses-btn");
+const coursesDropdown = document.querySelector(".courses-dropdown");
+const arrow = document.querySelector(".arrow-icon");
+
+coursesDropdown.style.display = "none";
+
+myCoursesBtn.addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    if (coursesDropdown.style.display === "none") {
+
+        coursesDropdown.style.display = "block";
+
+        arrow.style.transform = "rotate(0deg)";
+
+    } else {
+
+        coursesDropdown.style.display = "none";
+
+        arrow.style.transform = "rotate(-90deg)";
+
+    }
+
+});
+
+// ================= Profile =================
+
+const profileBox = document.querySelector(".profile-box");
+const profileDropdown = document.querySelector(".profile-dropdown");
+const profileArrow = document.querySelector(".profile-arrow");
+
+profileDropdown.style.display = "none";
+
+profileBox.addEventListener("click", function () {
+
+    if (profileDropdown.style.display === "none") {
+
+        profileDropdown.style.display = "block";
+        profileArrow.style.transform = "rotate(180deg)";
+
+    } else {
+
+        profileDropdown.style.display = "none";
+        profileArrow.style.transform = "rotate(0deg)";
+
+    }
+
+});
+
+
+
+
+</script>
+
+
+
+    
+
+
+</body>
+</html>
