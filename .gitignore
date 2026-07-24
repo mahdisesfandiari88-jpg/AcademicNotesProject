@@ -1,2 +1,11 @@
 venv/
 __pycache__/
+# Django uploads
+media/
+course_files/
+
+# Database (اگر دیتابیس داخل گیت نباشه)
+*.sqlite3
+
+# Environment
+.env

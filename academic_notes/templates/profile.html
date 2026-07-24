@@ -11,33 +11,49 @@
     <div class="profile-card">
 
         <div class="profile-avatar">
-            <img src="{% static 'images/other-pics/pfp.jpg' %}" alt="Profile">
+
+            {% if user.profile.image %}
+
+                <img src="{{ user.profile.image.url }}" alt="Profile">
+
+            {% elif user.profile.gender == "female" %}
+
+                <div class="emoji-avatar">👩🏻‍🎓</div>
+
+            {% elif user.profile.gender == "male" %}
+
+                <div class="emoji-avatar">👨🏻‍🎓</div>
+
+            {% else %}
+
+                <div class="emoji-avatar">🧑🏻‍🎓</div>
+
+            {% endif %}
+
         </div>
 
-        <h2>Souzan Dadashzadeh</h2>
+        <h2>{{ user.get_full_name|default:user.username }}</h2>
 
         <p class="profile-role">
-            Computer Science Student
+            {{ user.profile.major }}
         </p>
 
         <div class="profile-info">
 
             <div class="info-box">
                 <h4>Email</h4>
-                <p>souzan@example.com</p>
+                <p>{{ user.email }}</p>
             </div>
 
             <div class="info-box">
                 <h4>University</h4>
-                <p>University of Guilan</p>
+                <p>{{ user.profile.university|default:"Not set yet" }}</p>
             </div>
 
             <div class="info-box">
                 <h4>Bio</h4>
                 <p>
-                    Passionate about programming,
-                    web development and creating
-                    beautiful user interfaces.
+                    {{ user.profile.bio|default:"No bio yet." }}
                 </p>
             </div>
 

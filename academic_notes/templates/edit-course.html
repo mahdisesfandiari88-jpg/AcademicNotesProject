@@ -19,59 +19,17 @@
 
         <!-- Course Name -->
 
-        <div class="input-group">
+        <form method="POST">
+        {% csrf_token %}
 
-            <label>Course Name</label>
+        {{ form.as_p }}
 
-            <input
-                type="text"
-                value="Programming"
-            >
-
-        </div>
-
-
-        <!-- Description -->
-
-        <div class="input-group">
-
-            <label>Description</label>
-
-            <textarea rows="4">Introduction to C++ programming, algorithms, loops and functions.</textarea>
-
-        </div>
-
-
-        <!-- Course Color -->
-
-        <div class="input-group">
-
-            <label>Choose Color</label>
-
-            <div class="color-options">
-
-                <div class="color-circle green active-color"></div>
-
-                <div class="color-circle pink"></div>
-
-                <div class="color-circle orange"></div>
-
-                <div class="color-circle purple"></div>
-
-            </div>
-
-        </div>
-
-
-        <!-- Button -->
-
-        <button class="create-btn">
-
+        <button type="submit" class="create-btn">
             Update Course
-
         </button>
+        </form>
 
-    </div>
+
 
 </section>
 

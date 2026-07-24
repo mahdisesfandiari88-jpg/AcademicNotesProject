@@ -2,25 +2,24 @@ from django.db import models
 from courses.models import Course
 
 
-class Note(models.Model):
+class File(models.Model):
     title = models.CharField(
         max_length=100
     )
 
-    content = models.TextField()
-
-    created_at = models.DateTimeField(
-        auto_now_add=True
+    file = models.FileField(
+        upload_to="course_files/"
     )
 
-    updated_at = models.DateTimeField(
-        auto_now=True
+    uploaded_at = models.DateTimeField(
+        auto_now_add=True
     )
 
     course = models.ForeignKey(
         Course,
         on_delete=models.CASCADE
     )
+
 
     def __str__(self):
         return self.title

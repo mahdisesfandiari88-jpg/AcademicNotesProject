@@ -9,8 +9,7 @@
 
     <div class="welcome-text">
 
-        <h1>Welcome Back, Souzan! 👋</h1>
-
+        <h1>Welcome Back, {{ request.user.username }}! 👋</h1>
         <p>
             Keep learning,<br>
             one note at a time.
@@ -33,36 +32,46 @@
 
         <h2>Recent Notes</h2>
 
-        <div class="recent-item">
-            📝 Loops in C++
-        </div>
+        {% for note in recent_notes %}
 
         <div class="recent-item">
-            📝 HTML Basics
+
+            <a href="{% url 'note_detail' note.id %}">
+                📝 {{ note.title }}
+            </a>
+
         </div>
 
+        {% empty %}
+
         <div class="recent-item">
-            📝 Physics Formulas
+            No notes yet.
         </div>
+
+        {% endfor %}
 
     </div>
 
     <div class="recent-card">
-
         <h2>Recent Files</h2>
 
-        <div class="recent-item">
-            📄 Lecture1.pdf
-        </div>
+        {% for file in recent_files %}
 
         <div class="recent-item">
-            📄 Homework.docx
+
+            <a href="{{ file.file.url }}" target="_blank">
+                📄 {{ file.title }}
+            </a>
+
         </div>
+
+        {% empty %}
 
         <div class="recent-item">
-            📄 Midterm.pdf
+            No files yet.
         </div>
 
+        {% endfor %}
     </div>
 
 </section>

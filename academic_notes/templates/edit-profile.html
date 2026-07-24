@@ -5,82 +5,103 @@
 
 <link rel="stylesheet" href="{% static 'css/profile.css' %}">
 
+<form method="POST"
+      enctype="multipart/form-data">
+
+    {% csrf_token %}
+
 <section class="profile-page">
 
     <div class="profile-card">
 
-        <!-- Avatar -->
-        <div class="profile-avatar">
-            <img src="{% static 'images/other-pics/pfp.jpg' %}" alt="Profile">
-        </div>
+            <!-- Avatar -->
+            <div class="profile-avatar">
+
+        {% if user.profile.image %}
+
+            <img src="{{ user.profile.image.url }}" alt="Profile">
+
+        {% elif user.profile.gender == "female" %}
+
+            <div class="emoji-avatar">👩🏻‍🎓</div>
+
+        {% elif user.profile.gender == "male" %}
+
+            <div class="emoji-avatar">👨🏻‍🎓</div>
+
+        {% else %}
+
+            <div class="emoji-avatar">🧑🏻‍🎓</div>
+
+        {% endif %}
+
+    </div>
 
         <!-- Upload -->
-        <button class="upload-avatar-btn">
-            Upload & Change Photo
-        </button>
+        {{ form.image }}
 
         <!-- Gender -->
         <div class="input-group">
 
             <label>Gender</label>
 
-            <div class="gender-options">
-
-                <label>
-                    <input type="radio" name="gender" checked>
-                    Female
-                </label>
-
-                <label>
-                    <input type="radio" name="gender">
-                    Male
-                </label>
-
-            </div>
+            {{ form.gender }}
 
         </div>
 
         <!-- Full Name -->
         <div class="input-group">
             <label>Full Name</label>
-            <input type="text" value="Souzan Dadashzadeh">
+            <input
+                type="text"
+                name="first_name"
+                value="{{ user.first_name }}"
+            >
+
+            <input
+                type="text"
+                name="last_name"
+                value="{{ user.last_name }}"
+            >
         </div>
 
         <!-- Email -->
         <div class="input-group">
             <label>Email</label>
-            <input type="email" value="souzan@example.com">
+            <input
+                type="email"
+                name="email"
+                value="{{ user.email }}"
+            >
         </div>
 
         <!-- University -->
         <div class="input-group">
             <label>University</label>
-            <input type="text" value="University of Guilan">
+            {{ form.university }}
         </div>
 
         <!-- Major -->
         <div class="input-group">
             <label>Major</label>
-            <input type="text" value="Computer Science">
+            {{ form.major }}
         </div>
 
         <!-- Bio -->
         <div class="input-group">
             <label>Bio</label>
 
-            <textarea rows="4">
-Passionate about programming, web development and creating beautiful user interfaces.
-            </textarea>
+            {{ form.bio }}
 
         </div>
 
         <!-- Save -->
-        <button class="edit-profile-btn">
+        <button type="submit" class="edit-profile-btn">
             Save Changes
         </button>
-
     </div>
 
 </section>
 
+</form>
 {% endblock %}
